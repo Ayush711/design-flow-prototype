@@ -3,40 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Flow Generator</title>
+    <title>Helix Design Studio Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
+    <div class="ambient-shape ambient-a"></div>
+    <div class="ambient-shape ambient-b"></div>
+
     <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1>Design Flow Generator</h1>
-            <p class="subtitle">CSV Upload → Parse → Structure → Markdown → Visual Output → Download</p>
+        <header class="header card">
+            <div class="eyebrow">Executive Prototype</div>
+            <h1>Helix Design Studio</h1>
+            <p class="subtitle">Show the full story: Design Intake → Build Planning → Delivery Output</p>
+            <div class="header-actions">
+                <button id="presenterToggle" class="secondary" type="button" aria-expanded="false">Enable Presenter Mode</button>
+            </div>
         </header>
 
-        <!-- Input Section -->
-        <section class="card input-section">
-            <h2>Upload Your CSV</h2>
-            <p class="description">Select a CSV file with domain, event, and description columns</p>
-            <div class="upload-area">
-                <input type="file" id="fileInput" accept=".csv" />
-                <button id="uploadBtn" onclick="handleFile()">Upload & Generate</button>
+        <nav class="stepper card" aria-label="Prototype Workflow">
+            <button class="step active" data-step="1" type="button">
+                <span class="step-index">1</span>
+                <span class="step-text">Design Intake</span>
+            </button>
+            <button class="step" data-step="2" type="button">
+                <span class="step-index">2</span>
+                <span class="step-text">Build Plan</span>
+            </button>
+            <button class="step" data-step="3" type="button">
+                <span class="step-index">3</span>
+                <span class="step-text">Delivery Pack</span>
+            </button>
+        </nav>
+
+        <section class="card presenter-panel hidden" id="presenterPanel" aria-live="polite">
+            <h2>Presenter Mode</h2>
+            <p class="description">Use this script to explain the prototype clearly to executives and directors.</p>
+
+            <div class="split-grid presenter-grid">
+                <article class="panel">
+                    <h3>2-3 Minute Demo Script</h3>
+                    <ol class="presenter-script">
+                        <li>Start with Step 1 and upload the CSV to show design intake from business-friendly input.</li>
+                        <li>Move to Step 2 to show model-hour estimation and planning metrics.</li>
+                        <li>Run the planning flow to show visible execution readiness.</li>
+                        <li>Move to Step 3 and download the generated design package.</li>
+                        <li>Close with the message: this is static-hosted, low-cost, and ready for phased expansion.</li>
+                    </ol>
+                </article>
+                <article class="panel">
+                    <h3>Live Success Criteria</h3>
+                    <ul class="criteria-list">
+                        <li>
+                            <span>CSV intake works from browser UI</span>
+                            <span class="criteria-status pending" id="criteria-intake">Pending</span>
+                        </li>
+                        <li>
+                            <span>Design-to-plan metrics are visible</span>
+                            <span class="criteria-status pending" id="criteria-metrics">Pending</span>
+                        </li>
+                        <li>
+                            <span>Planning flow can be executed in UI</span>
+                            <span class="criteria-status pending" id="criteria-planning">Pending</span>
+                        </li>
+                        <li>
+                            <span>Delivery output can be downloaded</span>
+                            <span class="criteria-status pending" id="criteria-delivery">Pending</span>
+                        </li>
+                        <li>
+                            <span>Prototype remains static-hosting friendly</span>
+                            <span class="criteria-status pass" id="criteria-static">Pass</span>
+                        </li>
+                    </ul>
+                </article>
             </div>
-            <div id="loading" class="loading hidden">Processing your file...</div>
+        </section>
+
+        <section class="card stage" id="step-1">
+            <h2>Step 1: Intake Design Data</h2>
+            <p class="description">Upload CSV with domain, event, and description. This stage proves non-technical teams can provide input without coding tools.</p>
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" accept=".csv" />
+                <button id="analyzeBtn" type="button">Analyze Design Input</button>
+            </div>
+            <div class="hint">Tip: use sample-data.csv for a quick demo.</div>
+            <div id="loading" class="loading hidden">Parsing input and organizing design model...</div>
             <div id="error" class="error hidden"></div>
+            <div id="success" class="success hidden"></div>
+            <div class="stage-actions">
+                <button class="secondary" id="toStep2" type="button" disabled>Continue to Build Plan</button>
+            </div>
         </section>
 
-        <!-- Output Section -->
-        <section class="card output-section hidden" id="outputSection">
-            <h2>Generated Design</h2>
-            <div id="summary" class="summary"></div>
-            <div id="output" class="output"></div>
+        <section class="card stage hidden" id="step-2">
+            <h2>Step 2: Build Plan and Model Hours</h2>
+            <p class="description">Turn design signals into delivery planning metrics and a visible execution runboard.</p>
+
+            <div class="kpi-grid">
+                <article class="kpi-card">
+                    <span class="kpi-label">Domains</span>
+                    <strong id="kpiDomains">0</strong>
+                </article>
+                <article class="kpi-card">
+                    <span class="kpi-label">Events</span>
+                    <strong id="kpiEvents">0</strong>
+                </article>
+                <article class="kpi-card accent">
+                    <span class="kpi-label">Estimated Process Model Hours</span>
+                    <strong id="kpiHours">0h</strong>
+                </article>
+                <article class="kpi-card">
+                    <span class="kpi-label">Complexity Score</span>
+                    <strong id="kpiComplexity">0</strong>
+                </article>
+            </div>
+
+            <div class="split-grid">
+                <article class="panel">
+                    <h3>Domain Coverage</h3>
+                    <ul id="domainCoverage" class="coverage-list"></ul>
+                </article>
+                <article class="panel">
+                    <h3>Agent Runboard (Prototype Simulation)</h3>
+                    <ul class="agent-list" id="agentRunboard">
+                        <li><span>Design Analyst</span><span class="badge pending" id="agent-design">Pending</span></li>
+                        <li><span>Architecture Lead</span><span class="badge pending" id="agent-architecture">Pending</span></li>
+                        <li><span>Delivery Planner</span><span class="badge pending" id="agent-delivery">Pending</span></li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="stage-actions">
+                <button class="secondary" id="backToStep1" type="button">Back</button>
+                <button id="runPlanBtn" type="button">Run Planning Flow</button>
+                <button class="secondary" id="toStep3" type="button" disabled>Continue to Delivery Pack</button>
+            </div>
         </section>
 
-        <!-- Download Button -->
-        <section class="download-section hidden" id="downloadSection">
-            <button id="downloadBtn" onclick="downloadDesign()">Download Design</button>
+        <section class="card stage hidden" id="step-3">
+            <h2>Step 3: Delivery Pack Output</h2>
+            <p class="description">Export stakeholder-ready design documentation as markdown.</p>
+
+            <article class="executive-note" id="executiveSummary"></article>
+
+            <article class="panel">
+                <h3>Generated Design Document</h3>
+                <div id="output" class="output"></div>
+            </article>
+
+            <div class="stage-actions">
+                <button class="secondary" id="backToStep2" type="button">Back</button>
+                <button id="downloadBtn" type="button">Download design.md</button>
+            </div>
         </section>
     </div>
 
