@@ -1,0 +1,21 @@
+domain,event,description
+Billing,Invoice Created,When a new invoice is generated for a customer order
+Billing,Payment Received,When payment is successfully processed and recorded
+Billing,Refund Issued,When a refund is processed for returned items or cancellations
+Billing,Subscription Renewed,When a recurring subscription payment is processed
+Orders,Order Placed,When a customer submits a new order through the system
+Orders,Order Shipped,When an order is dispatched from the warehouse
+Orders,Order Delivered,When delivery is confirmed at customer location
+Orders,Order Cancelled,When a customer or system cancels an active order
+Inventory,Stock Updated,When inventory levels are adjusted after shipment or receipt
+Inventory,Low Stock Alert,When product inventory falls below minimum threshold
+Inventory,Reorder Triggered,When automatic reorder is initiated for low stock items
+Users,User Registered,When a new user account is created in the system
+Users,User Logged In,When a user successfully authenticates
+Users,Password Reset,When a user requests or completes password reset
+Users,Profile Updated,When user updates their account information
+Notifications,Email Sent,When system sends an email notification to user
+Notifications,SMS Sent,When system sends an SMS alert to user
+Notifications,Push Notification,When mobile push notification is triggered
+Analytics,Report Generated,When a scheduled or on-demand report is created
+Analytics,Dashboard Updated,When real-time dashboard metrics are refreshed

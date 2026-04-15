@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Flow Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Design Flow Generator</h1>
+            <p class="subtitle">CSV Upload → Parse → Structure → Markdown → Visual Output → Download</p>
+        </header>
+
+        <!-- Input Section -->
+        <section class="card input-section">
+            <h2>Upload Your CSV</h2>
+            <p class="description">Select a CSV file with domain, event, and description columns</p>
+            <div class="upload-area">
+                <input type="file" id="fileInput" accept=".csv" />
+                <button id="uploadBtn" onclick="handleFile()">Upload & Generate</button>
+            </div>
+            <div id="loading" class="loading hidden">Processing your file...</div>
+            <div id="error" class="error hidden"></div>
+        </section>
+
+        <!-- Output Section -->
+        <section class="card output-section hidden" id="outputSection">
+            <h2>Generated Design</h2>
+            <div id="summary" class="summary"></div>
+            <div id="output" class="output"></div>
+        </section>
+
+        <!-- Download Button -->
+        <section class="download-section hidden" id="downloadSection">
+            <button id="downloadBtn" onclick="downloadDesign()">Download Design</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿Title,Body,Assignee,Labels,,Status,TargetDueDate,Epic
+[FEATURE] Helix - Agentic Delivery Introduction,Deliverable - Website,,,,In Progress,,Helix - Framework Tasks
+,,,,,,,
+[FEATURE] Helix - Agentic Delivery Framework,Deliverable - Website / PPT,,,,In Progress,,Helix - Framework Tasks
+,,,,,,,
+[FEATURE] Helix - Discovery - Assess Readiness,,,,,,,Helix - Framework Tasks
+Helix - PM Domain discovery (include domain expert discovery),"Deliverable - Workshopt Templates (pain points, scoping, requirements)",John Connolly,,,In Progress,3-Apr,Helix - Framework Tasks
+Helix - Define User Acceptance Criteria,Deliverable - Document,,,,In Progress,3-Apr,Helix - Framework Tasks
+,,,,,,,
+[FEATURE] Helix - Design,"This milestone establishes the foundational understanding of the business domain and translates it into a structured, agent‑ready software design.
+It focuses on deep discovery, domain modeling, and creating the architectural blueprint that will guide all downstream agentic development.",,,,,,Helix - Framework Tasks
+Helix - PM EventStorming - Big Picture,Deliverable - Lucid Chart,JC,,,In Progress,30-Mar,Helix - Framework Tasks
+Helix - PM  EventStorming - Process Modeling,Deliverable - Lucid Chart,JC,,,In Progress,30-Mar,Helix - Framework Tasks
+Helix - PM  Context mapping,Deliverable - Lucid Chart,JC,,,In Progress,30-Mar,Helix - Framework Tasks
+Helix - PM EventStorming - Software Design,Deliverable - Lucid Chart,"JC, KC",,,Backlog,30-Mar,Helix - Framework Tasks
+Helix - PM Design per context,Deliverable - Figma,KC,,,Backlog,10-Apr,Helix - Framework Tasks
+Helix - PM Database Design per context,Deliverable - SQL,Nasir,,,Backlog,10-Apr,Helix - Framework Tasks
+,,,,,,,
+[FEATURE] Helix - Design to Develop contract,"This milestone formalizes the handoff between design and development by producing structured, machine‑readable assets that agentic developers can consume.",,,,,,Helix - Framework Tasks
+Helix - Design Software Design CSV,Deliverable - CSV,"JC, KC",,,In Progress,7-Apr,Helix - Framework Tasks
+Helix - Design Markdown template,Deliverable - MD,"JC, KC",,,In Progress,7-Apr,Helix - Framework Tasks
+Helix - Design Prompt,Deliverable - txt,,,,In Progress,7-Apr,Helix - Framework Tasks
+Helix - Design UI Assets,Deliverable - Figma,,,,Backlog,14-Apr,Helix - Framework Tasks
+Helix - Design Database Scripts,Deliverable - SQL,Nasir,,,Backlog,14-Apr,Helix - Framework Tasks
+,,,,,,,
+[FEATURE] Helix - Client Agentic Enablement (Optional),This milestone prepares the client’s engineering team to work effectively with agentic workflows and tools.,,,,,,Helix - Framework Tasks
+Helix - Setup Client Developers,Deliverable - Document;  People Enablement,,,,Backlog,14-Apr,Helix - Framework Tasks
+,,,,,,,
+[FEATURE] Helix - Develop,"This milestone executes the agent‑driven development process, combining automated generation with human‑in‑the‑loop oversight.",,,,,,Helix - Framework Tasks
+Helix - Design Architectural Instructions,Deliverable - MD,"DD, Steve",,,In Progress,14-Apr,Helix - Framework Tasks
+Helix - PM Agentic Infrastructure Setup,"Deliverable - Agents, settings","KC, Nasir",,,In Progress,14-Apr,Helix - Framework Tasks
+Helix - PM Agentic Development (includes data/UI/LLMs),Deliverable - Code files,"KC, Nasir",,,In Progress,14-Apr,Helix - Framework Tasks
+Helix - PM Agentic Testing / troubleshooting,Deliverable - Code files,??,,,In Progress,14-Apr,Helix - Framework Tasks
+Helix - PM Agentic Pull Requests,Deliverable - GitHub,KC,,,In Progress,14-Apr,Helix - Framework Tasks
+Helix - PM Agentic Integration Contracts between contexts,Deliverable - Code files,,,,In Progress,14-Apr,Helix - Framework Tasks
+Helix - PM Telemetry - Application,,,,,Backlog,,Helix - Framework Tasks
+,,,,,,,
+[FEATURE] Helix - Develop to Deliver contract,This milestone defines the operational and deployment‑ready assets required to move the solution into delivery.,JC/KC/DD,,,Backlog,10-Apr,Helix - Framework Tasks
+,,,,,,,
+[FEATURE] Helix - Deliver,"This milestone operationalizes the solution, ensuring it is deployed, validated, and ready for production use.",,,,In Progress,,Helix - Framework Tasks
+Helix - PM Environment Provisioning,GitHub,DD,,,In Progress,10-Apr,Helix - Framework Tasks
+Helix - PM Application deployment,GitHub,DD,,,Backlog,10-Apr,Helix - Framework Tasks
+Helix - PM Observability,??,,,,In Progress,14-Apr,Helix - Framework Tasks
+Helix - PM QA/ Validation,GitHub,DD,,,Backlog,10-Apr,Helix - Framework Tasks
+Helix - Design UAT,,,,,In Progress,,Helix - Framework Tasks
+Helix - PM Final Deliverable to Prod,,,,,Backlog,,Helix - Framework Tasks
