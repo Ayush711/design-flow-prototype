@@ -1,0 +1,30 @@
+domain,event,description
+Submission,Submission Created,When a broker initiates a new insurance submission for a client
+Submission,Submission Updated,When submission details are modified before underwriting review
+Submission,Submission Cancelled,When a submission is withdrawn before policy issuance
+Submission,Submission Approved,When underwriting approves a submission for quoting
+Party,Named Insured Added,When the primary insured party is registered on the submission
+Party,Contact Updated,When a board contact or property manager contact is modified
+Party,Property Manager Assigned,When a property management company is linked to a submission
+Property,Property Risk Assessed,When physical building characteristics are captured and evaluated
+Property,Fire Protection Evaluated,When fire protection class and sprinkler coverage are assessed
+Property,Year Built Recorded,When construction year is captured for age-based risk scoring
+Property,High Risk Flag Set,When a property exceeds risk thresholds and is flagged for review
+Coverage,CGL Limit Selected,When commercial general liability coverage amount is chosen
+Coverage,Property Coverage Toggled,When building property coverage is enabled or disabled
+Coverage,Deductible Configured,When the deductible amount is set by the broker
+Coverage,Coverage Confirmed,When the broker finalises coverage selections before rating
+Rating,Rating Initiated,When the underwriting rating engine is triggered for a submission
+Rating,Premium Calculated,When the final premium figure is computed from risk and coverage inputs
+Rating,Rate Override Applied,When an underwriter manually adjusts the system-generated rate
+Rating,Quote Issued,When a formal quote document is generated and sent to the broker
+Policy,Policy Bound,When coverage is confirmed and the policy is placed into effect
+Policy,Policy Document Produced,When the policy wording and schedule are generated for the client
+Policy,Endorsement Requested,When a mid-term change to an active policy is submitted
+Policy,Renewal Initiated,When an expiring policy enters the renewal workflow
+Billing,Invoice Generated,When a premium invoice is created following policy binding
+Billing,Payment Recorded,When a payment against the invoice is received and applied
+Billing,Commission Calculated,When broker commission is computed based on written premium
+Claims,Claim Reported,When a loss event is reported against an active policy
+Claims,Claim Assessed,When an adjuster evaluates the validity and value of a claim
+Claims,Claim Settled,When a claim payment is issued and the file is closed
